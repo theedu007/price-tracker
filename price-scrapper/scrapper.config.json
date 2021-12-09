@@ -1,0 +1,17 @@
+{
+    "siman": {
+        "url": "https://sv.siman.com/",
+        "paginationFormat": "?page=",
+        "categories": [
+            { 
+                "name": "laptops",
+                "url": "https://sv.siman.com/tecnologia/computadoras/laptops"
+            },
+            {
+                "name": "celulares",
+                "url": "https://sv.siman.com/tecnologia/telefonos/celulares"
+            }
+        ]
+        
+    }
+}
