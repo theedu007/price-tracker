@@ -1,17 +1,21 @@
 {
-    "siman": {
+    "simanSV": {
+        "vendorId": "siman-sv",
         "url": "https://sv.siman.com/",
         "paginationFormat": "?page=",
         "categories": [
             { 
-                "name": "laptops",
+                "name": "Laptops",
                 "url": "https://sv.siman.com/tecnologia/computadoras/laptops"
             },
+			{
+                   "name": "celulares",
+                   "url": "https://sv.siman.com/tecnologia/telefonos/celulares"
+			},
             {
-                "name": "celulares",
-                "url": "https://sv.siman.com/tecnologia/telefonos/celulares"
+                "name": "Lavadora de platos",
+                "url": "https://sv.siman.com/linea-blanca/lavadora-de-platos"
             }
-        ]
-        
+        ]			
     }
 }

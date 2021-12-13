@@ -5,7 +5,7 @@ const ProductScrapper = require('./product');
 class Index {
     constructor(browser) {
         this.browser = browser;
-        this.scraper = scraperConfig.siman;
+        this.scraper = scraperConfig.simanSV;
         this.products = [];
         this.productsMetadata = [];
     }
@@ -37,8 +37,6 @@ class Index {
                 this.productsMetadata.push(data);
             }
         }
-
-        const a = 1;
     }
 }
 

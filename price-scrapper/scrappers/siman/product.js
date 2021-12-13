@@ -13,11 +13,13 @@ class ProductScrapper {
         const { category, url } = product;
         let productId = undefined;
         let productPrice = undefined;
+        let productName = undefined;
 
         await this.page.goto(url, { waitUntil: 'networkidle2', timeout: 50000 });
 
         const productIdMetatag = await this.page.$('meta[property="product:retailer_item_id"]');
         const productPriceMetatag = await this.page.$('meta[property="product:price:amount"]');
+        const productNameMetatag = await this.page.$('.vtex-store-components-3-x-productNameContainer--quickview');
         
         if(productIdMetatag) {
             productId = await productIdMetatag.evaluate(node => node.getAttribute('content'));
@@ -25,13 +27,21 @@ class ProductScrapper {
         if (productPriceMetatag) {
             productPrice = await productPriceMetatag.evaluate(node => node.getAttribute('content'));
         }
+        if (productPriceMetatag) {
+            productName = await productNameMetatag.evaluate(node => node.textContent);
+        }
 
-        if(productId && productPrice) {
+        if(productId && productPrice && productName) {
+            const date = new Date();
             return {
-                productId: productId,
-                price: productPrice,
+                id: productId,
+                productPrice: {
+                    price: productPrice,
+                    date: date.toISOString()
+                },
                 category: category,
-                url: url
+                url: url,
+                name: productName
             }
         }
     }
