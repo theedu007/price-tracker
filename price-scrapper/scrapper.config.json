@@ -9,12 +9,20 @@
                 "url": "https://sv.siman.com/tecnologia/computadoras/laptops"
             },
 			{
-                   "name": "celulares",
+                   "name": "Celulares",
                    "url": "https://sv.siman.com/tecnologia/telefonos/celulares"
 			},
             {
                 "name": "Lavadora de platos",
                 "url": "https://sv.siman.com/linea-blanca/lavadora-de-platos"
+            },
+            {
+                "name": "Tablets",
+                "url": "https://sv.siman.com/tecnologia/computadoras/tablets"
+            },
+            {
+                "name": "Refrigeradoras",
+                "url": "https://sv.siman.com/linea-blanca/refrigeradoras"
             }
         ]			
     }

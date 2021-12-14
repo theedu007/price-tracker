@@ -11,6 +11,7 @@ const scrapeData = async () => {;
 
     for await(const scraperClass of scrapers) {
         const scraper = new scraperClass(browser);
+        console.clear();
         await scraper.initialize();
         await scraper.scrapeCategories();
         await scraper.scrapeProducts();

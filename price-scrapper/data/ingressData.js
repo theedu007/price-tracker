@@ -67,8 +67,8 @@ class IngressData {
 
         //Add new pricing to existing products
         const existingProducts = scraperResult.filter(item => existingProductsId.includes(item.id));
-        if(existingProducts.lenght > 0) {
-            const existingProductsCursor = await productsCollection.find({
+        if(existingProducts.length > 0) {
+            const existingProductsCursor = productsCollection.find({
                 productId: { $in: existingProducts.map(item => item.id) }
             });
     
