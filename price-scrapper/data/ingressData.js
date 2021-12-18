@@ -22,16 +22,31 @@ class IngressData {
     async IngressData(scraperResult, vendorId) {
         const database = this.client.db("priceTracker");
         const productsCollection = database.collection("products");
-        const pricesCollection = database.collection("productPrices");
+        const pricesCollection = database.collection("  ");
 
-        const incomingProductsId = scraperResult.map(item => item.id);
+        let hasNull = false
+        const incomingProductsId = scraperResult.map(item => {
+            if(item) {
+                return item.id;
+            } else {
+                hasNull = true;
+            }
+        });
+
+        if(hasNull) {
+            debugger;
+        }
 
         const existingProductsId = await productsCollection.find({
             productId: { $in: incomingProductsId }
         }).map(item => item.productId)
         .toArray();
 
-        const newProducts = scraperResult.filter(item => !existingProductsId.includes(item.id));
+        const newProducts = scraperResult.filter(item => {
+            if(item) {
+                return !existingProductsId.includes(item.id)
+            }
+        });
 
         //Save new Products
         const dataToSave = newProducts.reduce((acc, item) => {

@@ -25,7 +25,9 @@ class Index {
             const categoryScraper = new CategoryScraper(category.url, this.browser);
             await categoryScraper.initialize();
             const result = await categoryScraper.getProductsUrl(this.scraper.paginationFormat, category.name);
-            this.products = [...this.products, ...result];
+            if(result) {
+                this.products = [...this.products, ...result];
+            }
             await categoryScraper.close();
             console.log(`Done scraping category: ${category.name}`.green);
             console.log();
@@ -43,7 +45,9 @@ class Index {
                 await productScraper.initialize();
                 const data = await productScraper.getProductData(product);
                 await productScraper.close();
-                this.productsMetadata.push(data);
+                if(data) {
+                    this.productsMetadata.push(data);
+                }
                 console.log(`#${counter} Done scraping url: ${product.url} category: ${product.category}`.green);
                 console.log();
                 counter++;

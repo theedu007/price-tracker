@@ -1,8 +1,10 @@
-const puppeteer = require('puppeteer')
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth')
 const SimanScrapper = require('./scrappers/siman/scraper');
 const IngressData = require('./data/ingressData');
 
-const scrapeData = async () => {;
+const scrapeData = async () => {
+    puppeteer.use(StealthPlugin())
     const browser = await puppeteer.launch({headless: true});
     const metadata = {};
     const scrapers = [
@@ -33,5 +35,4 @@ const scrapeData = async () => {;
     }
 }
 
-scrapeData()
-.catch(error => console.error(error));
+scrapeData();

@@ -37,12 +37,14 @@ class ProductScrapper {
                 id: productId,
                 productPrice: {
                     price: productPrice,
-                    date: date.toISOString()
+                    date: date
                 },
                 category: category,
                 url: url,
                 name: productName
             }
+        } else {
+            debugger;
         }
     }
 
