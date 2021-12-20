@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceTracker.Api", "PriceTracker.Api\PriceTracker.Api.csproj", "{84009C17-2939-4639-9BB7-B3AB2B71174B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQL", "GraphQL\GraphQL.csproj", "{8AD0EC1E-4AFA-46F2-9D8F-D9EE2978641E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{4FCC8F22-B7D4-4D01-9869-BE93DF783213}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84009C17-2939-4639-9BB7-B3AB2B71174B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84009C17-2939-4639-9BB7-B3AB2B71174B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84009C17-2939-4639-9BB7-B3AB2B71174B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84009C17-2939-4639-9BB7-B3AB2B71174B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AD0EC1E-4AFA-46F2-9D8F-D9EE2978641E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AD0EC1E-4AFA-46F2-9D8F-D9EE2978641E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AD0EC1E-4AFA-46F2-9D8F-D9EE2978641E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AD0EC1E-4AFA-46F2-9D8F-D9EE2978641E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FCC8F22-B7D4-4D01-9869-BE93DF783213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FCC8F22-B7D4-4D01-9869-BE93DF783213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FCC8F22-B7D4-4D01-9869-BE93DF783213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FCC8F22-B7D4-4D01-9869-BE93DF783213}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19627AF5-DD8F-4A57-8B39-F74699E90740}
+	EndGlobalSection
+EndGlobal

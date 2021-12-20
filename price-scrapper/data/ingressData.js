@@ -22,7 +22,7 @@ class IngressData {
     async IngressData(scraperResult, vendorId) {
         const database = this.client.db("priceTracker");
         const productsCollection = database.collection("products");
-        const pricesCollection = database.collection("  ");
+        const pricesCollection = database.collection("productPrices");
 
         let hasNull = false
         const incomingProductsId = scraperResult.map(item => {
