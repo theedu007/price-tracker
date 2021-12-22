@@ -9,6 +9,7 @@ namespace Data.DataAccessObjects.Interfaces
 {
     public interface IProductPriceDAO
     {
-        ProductPrice GetPriceForProduct(string productId);
+        List<ProductPrice> GetAllPricesForProduct(string productId);
+        List<ProductPrice> GetPricesForProductBetweenDates(string productId, DateTime startDate, DateTime endDate);
     }
 }

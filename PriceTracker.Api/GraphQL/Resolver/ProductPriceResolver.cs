@@ -17,6 +17,9 @@ namespace GraphQL.Resolver
             _dataAccess = dataAccess;
         }
 
-        public ProductPrice GetPriceForProduct(string productId) => _dataAccess.GetPriceForProduct(productId);
+        public List<ProductPrice> GetAllPricesForProduct(string productId) => _dataAccess.GetAllPricesForProduct(productId);
+
+        public List<ProductPrice> GetPricesForProductBetweenDates(string productId, DateTime startDate, DateTime endDate) =>
+            _dataAccess.GetPricesForProductBetweenDates(productId, startDate, endDate);
     }
 }
