@@ -31,7 +31,7 @@ class ProductScrapper {
             productName = await productNameMetatag.evaluate(node => node.textContent);
         }
 
-        if(productId && productPrice && productName) {
+        if(productId && productName) {
             const date = new Date();
             return {
                 id: productId,
@@ -43,8 +43,6 @@ class ProductScrapper {
                 url: url,
                 name: productName
             }
-        } else {
-            debugger;
         }
     }
 
